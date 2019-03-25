@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="static/css/autocomplete.css" rel="stylesheet">
+</head>     
+<body>
+   <div>
+      <div class = 'banner'><h1><a class = 'main-link' href="/">MOVIE EXPLORER</a></h1></div>
+	  <table style = 'margin: auto; border-spacing: 140px 0px; '>
+		<tr>
+		  <td>
+					<div class = 'center'>
+							<div class = 'block'>
+							   <div>
+								  <div><h2>Predict genres by title</h2></div>
+								  <div><p>Enter a title and enjoy similar movies</p></div>
+								  <form action = "http://localhost:5000/genre-predict-res" method = "POST">
+									 <div class = "autocomplete" style="width:300px;">
+										<input id="myInput" type = "text" name = "Title" placeholder="Film title"/>
+									 </div>
+									 <input class = 'button-style' onclick = 'javascript:create()' type="submit" value = "Click">
+								  </form>
+							   </div>
+							</div>
+						 </div>					
+			  </td>
+			  <td>
+					<div class = 'center'>
+							<div class = 'block'>
+							   <div>
+								  <div><h2>Predict genres by description</h2></div>
+								  <div><p>Enter a description</p></div>
+								  <form action = "http://localhost:5000/genres-description" method = "POST">
+									 <div class = "not-autocomplete" style="width:300px;">
+										<input id="myInput" type = "text" name = "Description" placeholder="Film title"/>
+									 </div>
+									 <input class = 'button-style' onclick = 'javascript:create_second_block()' type="submit" value = "Click">
+								  </form>
+							   </div>
+							</div>
+						 </div>
+			  </td>
+			</tr>
+	  </table>
+
+   </div>   
+<script src="static/js/m10.js"></script>
+
+</body>
+</html>

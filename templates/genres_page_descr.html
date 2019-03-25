@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="static/css/autocomplete.css" rel="stylesheet">
+</head>     
+<body>
+   <div>
+      <div class = 'banner'><h1><a class = 'main-link' href="/">MOVIE EXPLORER</a></h1></div>
+      <div class = 'center' style = 'height : 500px'>
+         <div class = 'output'>
+            <div>
+                {% for genre in genres %}
+                    <p style="text-align:center; font-size: 140%; line-height: 10px">
+                        {{genre}}
+                    </p>
+                {% endfor %}
+            <br>
+            <div><a class = 'href-style' href = "/genre-predict">Come back</a></div>
+            <br>
+            <div>
+                    <form action="/process_data/" method="POST">
+                        <input type="hidden" name="index" value="1">
+                        <input type="submit" class='button-style' value="UPDATE DATA">
+                    </form>
+            </div>
+         </div>
+      </div>
+   </div>   
+<script src="static/js/m10.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="static/css/autocomplete.css" rel="stylesheet">
+</head>     
+<body>
+   <div>
+      <div class = 'banner'><h1><a class = 'main-link' href="/">MOVIE EXPLORER</a></h1></div>
+      <div class = 'center'>
+         <div class = 'block'>
+            <div>
+               <div><h2>Get recommendations</h2></div>
+               <div><p>Enter a title and enjoy similar movies</p></div>
+               <form action = "http://localhost:5000/rec-actors-res" method = "POST">
+                  <div class = "not-autocomplete" style="width:300px;">
+                     <input id="myInput" type = "text" name = "Title"  list = "movie_list" placeholder="Film title"/>
+                  </div>
+                  <input class = 'button-style' onclick = 'javascript:create()' type="submit" value = "Click">
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>   
+   
+<datalist id="movie_list">
+		<option>The Shawshank Redemption</option>
+	  <option>The Godfather</option>
+	  <option>The Godfather: Part II</option>
+	  <option>The Dark Knight</option>
+	  <option>12 Angry Men</option>
+	  <option>Schindler's List</option>
+	  <option>The Lord of the Rings: The Return of the King</option>
+	  <option>Pulp Fiction</option>
+	  <option>The Good, the Bad and the Ugly</option>
+	  <option>Fight Club</option>
+	  <option>he Lord of the Rings: The Fellowship of the Ring</option>
+	  <option>Forrest Gump</option>
+	  <option>Star Wars: Episode V - The Empire Strikes Back</option>
+	  <option>Inception</option>
+	  <option>The Lord of the Rings: The Two Towers</option>
+	  <option>One Flew Over the Cuckoo's Nest</option>
+	  <option>Goodfellas</option>
+	  <option>The Matrix</option>
+	  <option>Seven Samurai</option>
+	  <option>City of God</option>
+	  <option>Se7en</option>
+	  <option>Star Wars: Episode IV - A New Hope</option>
+	  <option>The Silence of the Lambs</option>
+	  <option>It's a Wonderful Life</option>
+	  <option>Life Is Beautiful</option>
+	  <option>The Usual Suspects</option>
+	  <option>Spirited Away</option>
+	  <option>Saving Private Ryan</option>
+	  <option>Léon: The Professional</option>
+	  <option>The Green Mile</option>
+	  <option>Interstellar</option>
+	  <option>Psycho</option>
+	  <option>American History X</option>
+	  <option>City Lights</option>
+	  <option>Once Upon a Time in the West</option>
+	  <option>Casablanca</option>
+	  <option>Modern Times</option>
+	  <option>The Intouchables</option>
+	  <option>The Pianist</option>
+	  <option>The Departed</option>
+	  <option>Terminator 2: Judgment Day</option>
+	  <option>Back to the Future</option>
+	  <option>Whiplash</option>
+	  <option>Rear Window</option>
+	  <option>Raiders of the Lost Ark</option>
+	  <option>The Lion King</option>
+	  <option>Gladiator</option>
+	  <option>The Prestige</option>
+	  <option>Apocalypse Now</option>
+	  <option>Memento</option>
+	  <option>Alien</option>
+	  <option>Avengers: Infinity War</option>
+	  <option>The Great Dictator</option>
+	  <option>Cinema Paradiso</option>
+	  <option>Grave of the Fireflies</option>
+	  <option>Sunset Boulevard</option>
+	  <option>The Lives of Others</option>
+	  <option>Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb</option>
+	  <option>Paths of Glory</option>
+	  <option>The Shining</option>
+	  <option>Django Unchained</option>
+	  <option>WALL·E</option>
+	  <option>Princess Mononoke</option>
+	  <option>Witness for the Prosecution</option>
+	  <option>American Beauty</option>
+	  <option>The Dark Knight Rises</option>
+	  <option>Oldboy</option>
+	  <option>Aliens</option>
+	  <option>Coco</option>
+	  <option>Once Upon a Time in America</option>
+	  <option>Das Boot</option>
+	  <option>Citizen Kane</option>
+	  <option>Braveheart</option>
+	  <option>Vertigo</option>
+	  <option>North by Northwest</option>
+	  <option>Reservoir Dogs</option>
+	  <option>Star Wars: Episode VI - Return of the Jedi</option>
+	  <option>M</option>
+	  <option>Your Name.</option>
+	  <option>Dangal</option>
+	  <option>Amadeus</option>
+	  <option>Requiem for a Dream</option>
+	  <option>Like Stars on Earth</option>
+	  <option>Lawrence of Arabia</option>
+	  <option>Eternal Sunshine of the Spotless Mind</option>
+	  <option>A Clockwork Orange</option>
+	  <option>Amélie</option>
+	  <option>3 Idiots</option>
+	  <option>2001: A Space Odyssey</option>
+	  <option>Double Indemnity</option>
+	  <option>Toy Story</option>
+	  <option>Taxi Driver</option>
+	  <option>Singin' in the Rain</option>
+	  <option>Inglourious Basterds</option>
+	  <option>Full Metal Jacket</option>
+	  <option>To Kill a Mockingbird</option>
+	  <option>Bicycle Thieves</option>
+	  <option>The Kid</option>
+	  <option>The Sting</option>
+	  <option>Toy Story 3</option>
+	  <option>Good Will Hunting</option>
+	  <option>The Hunt</option>
+	  <option>Snatch</option>
+	  <option>Scarface</option>
+	  <option>Monty Python and the Holy Grail</option>
+	  <option>For a Few Dollars More</option>
+	  <option>The Apartment</option>
+	  <option>L.A. Confidential</option>
+	  <option>Metropolis</option>
+	  <option>A Separation</option>
+	  <option>Indiana Jones and the Last Crusade</option>
+	  <option>Rashomon</option>
+	  <option>Up</option>
+	  <option>All About Eve</option>
+	  <option>Yojimbo</option>
+	  <option>Batman Begins</option>
+	  <option>Some Like It Hot</option>
+	  <option>Unforgiven</option>
+	  <option>Downfall</option>
+	  <option>The Treasure of the Sierra Madre</option>
+	  <option>Die Hard</option>
+	  <option>Heat</option>
+	  <option>Bohemian Rhapsody</option>
+	  <option>Ikiru</option>
+	  <option>Raging Bull</option>
+	  <option>Incendies</option>
+	  <option>The Great Escape</option>
+	  <option>Children of Heaven</option>
+	  <option>My Father and My Son</option>
+	  <option>Pan's Labyrinth</option>
+	  <option>Chinatown</option>
+	  <option>The Third Man</option>
+	  <option>My Neighbor Totoro</option>
+	  <option>Ran</option>
+	  <option>Howl's Moving Castle</option>
+	  <option>Judgment at Nuremberg</option>
+	  <option>The Secret in Their Eyes</option>
+	  <option>The Gold Rush</option>
+	  <option>The Bridge on the River Kwai</option>
+	  <option>A Beautiful Mind</option>
+	  <option>Three Billboards Outside Ebbing, Missouri</option>
+	  <option>Lock, Stock and Two Smoking Barrels</option>
+	  <option>On the Waterfront</option>
+	  <option>Casino</option>
+	  <option>The Seventh Seal</option>
+	  <option>Inside Out</option>
+	  <option>The Elephant Man</option>
+	  <option>Room</option>
+	  <option>Mr. Smith Goes to Washington</option>
+	  <option>The Wolf of Wall Street</option>
+	  <option>V for Vendetta</option>
+	  <option>Warrior</option>
+	  <option>Blade Runner</option>
+	  <option>Wild Strawberries</option>
+	  <option>The General</option>
+	  <option>Dial M for Murder</option>
+	  <option>Trainspotting</option>
+	  <option>No Country for Old Men</option>
+	  <option>There Will Be Blood</option>
+	  <option>The Sixth Sense</option>
+	  <option>Gone with the Wind</option>
+	  <option>The Thing</option>
+	  <option>Fargo</option>
+	  <option>Gran Torino</option>
+	  <option>The Deer Hunter</option>
+	  <option>Finding Nemo</option>
+	  <option>Come and See</option>
+	  <option>Sherlock Jr.</option>
+	  <option>The Big Lebowski</option>
+	  <option>Shutter Island</option>
+	  <option>Kill Bill: Vol. 1</option>
+	  <option>Cool Hand Luke</option>
+	  <option>Rebecca</option>
+	  <option>Tokyo Story</option>
+	  <option>Mary and Max</option>
+	  <option>Hacksaw Ridge</option>
+	  <option>Sunrise</option>
+	  <option>Gone Girl</option>
+	  <option>How to Train Your Dragon</option>
+	  <option>Wild Tales</option>
+	  <option>Jurassic Park</option>
+	  <option>Into the Wild</option>
+	  <option>The Bandit</option>
+	  <option>Life of Brian</option>
+	  <option>It Happened One Night</option>
+	  <option>In the Name of the Father</option>
+	  <option>Platoon</option>
+	  <option>The Grand Budapest Hotel</option>
+	  <option>Stand by Me</option>
+	  <option>The Truman Show</option>
+	  <option>Network</option>
+	  <option>Stalker</option>
+	  <option>Persona</option>
+	  <option>Hotel Rwanda</option>
+	  <option>Memories of Murder</option>
+	  <option>Ben-Hur</option>
+	  <option>12 Years a Slave</option>
+	  <option>The Wages of Fear</option>
+	  <option>Million Dollar Baby</option>
+	  <option>The Passion of Joan of Arc</option>
+	  <option>Andrei Rublev</option>
+	  <option>Rush</option>
+	  <option>Before Sunrise</option>
+	  <option>Mad Max: Fury Road</option>
+	  <option>Rang De Basanti</option>
+	  <option>The 400 Blows</option>
+	  <option>Spotlight</option>
+	  <option>Prisoners</option>
+	  <option>Hachi: A Dog's Tale</option>
+	  <option>Amores Perros</option>
+	  <option>Logan</option>
+	  <option>The Princess Bride</option>
+	  <option>Catch Me If You Can</option>
+	  <option>Nausicaä of the Valley of the Wind</option>
+	  <option>Butch Cassidy and the Sundance Kid</option>
+	  <option>Harry Potter and the Deathly Hallows: Part 2</option>
+	  <option>Rocky</option>
+	  <option>Barry Lyndon</option>
+	  <option>Monsters, Inc.</option>
+	  <option>The Grapes of Wrath</option>
+	  <option>The Maltese Falcon</option>
+	  <option>A Star Is Born</option>
+	  <option>Donnie Darko</option>
+	  <option>Dead Poets Society</option>
+	  <option>Diabolique</option>
+	  <option>The Terminator</option>
+	  <option>Gandhi</option>
+	  <option>La Haine</option>
+	  <option>Groundhog Day</option>
+	  <option>Sanjuro</option>
+	  <option>The Nights of Cabiria</option>
+	  <option>The Wizard of Oz</option>
+	  <option>Jaws</option>
+	  <option>The Help</option>
+	  <option>Blade Runner 2049</option>
+	  <option>La La Land</option>
+	  <option>In the Mood for Love</option>
+	  <option>Paper Moon</option>
+	  <option>Tangerines</option>
+	  <option>Gangs of Wasseypur</option>
+	  <option>Before Sunset</option>
+	  <option>The Handmaiden</option>
+	  <option>Paris, Texas</option>
+	  <option>The Best Years of Our Lives</option>
+	  <option>Guardians of the Galaxy</option>
+	  <option>Pirates of the Caribbean: The Curse of the Black Pearl</option>
+	  <option>Castle in the Sky</option>
+	  <option>The Bourne Ultimatum</option>
+	  <option>8½</option>
+	  <option>Beauty and the Beast</option>
+	</datalist>
+<script src="static/js/m10.js"></script>
+
+</body>
+</html>
+
+

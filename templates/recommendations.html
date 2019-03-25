@@ -1,0 +1,56 @@
+<html>
+      <link href="static/css/autocomplete.css" rel="stylesheet"> 
+<style>
+   a {
+      font-size: 25px;
+   }
+   @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display+SC');
+   a:link { color: #2272ae;  text-decoration: none;}
+   a:visited { color: #2272ae;  text-decoration: none; }
+   a:hover { text-decoration: underline; }
+   a:active { color: blue; }
+	#wrap {
+     width:1000px;
+     margin:0 auto;
+	}
+	#left_col {
+	 line-height: 0.5; text-align:center;
+	 font-size: 180%; font-color: black;
+     float:left;
+     /*width:650px;*/
+	}
+	#right_col {
+	 line-height: 0.5; text-align:center;
+	 font-size: 180%; font-color: black;
+     float:right;
+     /*width:650px;*/
+	}
+</style>
+
+<div class = 'banner'><h1><a style = 'font-size: 44px; color: #3e3434e0;' class = 'main-link' href="/">MOVIE EXPLORER</a></h1></div>
+
+    <p style="color:#3e3434e0; text-align:center; font-size: 280%; line-height: 5px; height: 5px;"> Recommendations for movie <i> {{title}} </i>: </p>
+    <br/>
+ 	   <div id="wrap">
+			<div id="left_col">
+					{% for id in id_list1 %}
+						<!--{% if top20Recom[id] !=  title %} -->
+					   <p> 
+					   <a href=  "{{ result[id] }}" > {{ id }} </a>
+					   </p>
+						   <!--{% endif %} -->
+					  {% endfor %}
+			   </div>
+	   
+			   <div id="right_col">
+					{% for id in id_list2 %}
+					   <p> 
+					   <a href="{{ result[id] }}"> {{ id }} </a>
+					   </p>
+					  {% endfor %}
+				 </div>
+  	</div> 
+ </body>
+</html>
+
+
